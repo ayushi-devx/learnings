@@ -245,7 +245,7 @@ MongoDB fits the project because the structure of generated content will evolve 
 
 ---
 
-# 🤖 AI Layer
+#  AI Layer
 
 The AI layer should not be tightly coupled to one model.
 
@@ -478,7 +478,7 @@ This makes AI-generated videos much more reliable and consistent.
 
 ---
 
-# 🎬 Video Rendering
+#  Video Rendering
 
 Two rendering technologies will be supported behind a common interface.
 
