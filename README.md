@@ -226,9 +226,9 @@ The backend should remain modular enough that Express can later be replaced with
 
 # Database
 
-## MongoDB
+## Supabase
 
-MongoDB will store:
+Supabase (managed Postgres) will store:
 
 * Users
 * Projects
@@ -241,7 +241,7 @@ MongoDB will store:
 * Export history
 * Version history
 
-MongoDB fits the project because the structure of generated content will evolve over time and the **Storyboard JSON is naturally document-oriented**.
+Supabase fits the project because it auto-scales without infrastructure management and gives built-in auth, storage, and realtime out of the box, reducing custom backend work. Document-shaped data such as **Storyboard JSON** is stored as `jsonb` columns rather than requiring a document database.
 
 ---
 
@@ -1098,7 +1098,7 @@ The benchmark results will determine the final production renderer.
 | Frontend          | React + TypeScript     | —                            |
 | Styling           | Tailwind CSS           | —                            |
 | Backend           | Node.js + Express      | —                            |
-| Database          | MongoDB                | PostgreSQL later if required |
+| Database          | Supabase (Postgres)    | Self-hosted PostgreSQL later if required |
 | LLM               | Provider abstraction   | OpenAI / Gemini / Anthropic  |
 | Research          | Crawl4AI               | Browserbase + Stagehand      |
 | Storyboard        | Custom JSON schema     | —                            |
@@ -1179,7 +1179,9 @@ NODE_ENV=development
 PORT=5000
 
 # Database
-MONGODB_URI=
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 
 # LLM
 OPENAI_API_KEY=
